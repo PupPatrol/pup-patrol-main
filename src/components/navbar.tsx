@@ -25,7 +25,7 @@ function Navbar() {
                 <span>About us</span>
             </button>
             <button className="rounded-full col-start-8 justify-self-end mr-2 bg-gray-200 w-14 h-7 sm:h-9 sm:w-18 md:mr-0 md:justify-self-start md:h-11 md:w-22 lg:h-13 lg:w-26 2xl:col-start-7 2xl:justify-self-center">
-                <span className="text-sm sm:text-base md:text-xl">Log in</span>
+                <span className="text-sm sm:text-base md:text-xl">Login</span>
             </button>
            
         </div>

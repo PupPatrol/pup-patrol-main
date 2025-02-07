@@ -3,11 +3,12 @@ import { useState } from 'react'
 // import viteLogo from '/vite.svg'
 import './index.css'
 
-function App() {
-  const [count, setCount] = useState(0)
+import Navbar from './components/navbar'
 
+function App() {
   return (
   <div>
+  <Navbar />
   <h1 className='text-3xl font-bold underline'>Wait... Im freaky!</h1>
   <h2>GYAAAAT!!!</h2>
   </div>

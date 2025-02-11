@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-@import "tailwindcss";
-=======
 @import 'tailwindcss';
 
 @layer base {
@@ -145,4 +142,3 @@ body {
 		transform: translateY(0);
 	}
 }
->>>>>>> 503b20e (finished nav mobile)

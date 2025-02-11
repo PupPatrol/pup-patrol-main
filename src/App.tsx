@@ -10,7 +10,7 @@ function App() {
   <div>
   <Navbar />
   <h1 className='text-3xl font-bold underline'>Wait... Im freaky!</h1>
-  <h2>GYAAAAT!!!</h2>
+  <h2>GYAAAAT!!!sadadsadas</h2>
   </div>
   )
 }

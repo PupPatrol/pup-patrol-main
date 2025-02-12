@@ -1,18 +1,25 @@
 .block-indentation {
-	position: absolute;
-	height: 40px;
-	width: 60%;
-	background-color: #fff;
-	bottom: 0;
-	left: -50px;
-	transform: skew(45deg);
+	width: 0;
+	height: 0;
+	border-top: 100px solid red;
+	border-right: 500px solid transparent;
 }
+
+/* https://css-tricks.com/the-shapes-of-css/ */
+
+/* .block-indentation {
+	width: 0;
+	height: 0;
+	border-top: 100px solid red;
+	border-right: 100px solid transparent;
+} */
 
 .section-padding {
 	padding: 3.2em 2em;
 }
 
 .subHeading {
+	position: absolute;
 	font-size: 1.25rem;
 	text-transform: uppercase;
 	letter-spacing: 5%;

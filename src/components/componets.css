@@ -1,0 +1,20 @@
+.block-indentation {
+	position: absolute;
+	height: 40px;
+	width: 60%;
+	background-color: #fff;
+	bottom: 0;
+	left: -50px;
+	transform: skew(45deg);
+}
+
+.section-padding {
+	padding: 3.2em 2em;
+}
+
+.subHeading {
+	font-size: 1.25rem;
+	text-transform: uppercase;
+	letter-spacing: 5%;
+	color: var(--color-main-color);
+}

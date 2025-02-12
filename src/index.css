@@ -1,4 +1,5 @@
 @import 'tailwindcss';
+@import './components/componets.css';
 
 @layer base {
 	.container {
@@ -11,17 +12,16 @@
 	--color-white: #f2f2f2;
 	--color-bg-color: #6c9565;
 	--color-main-color: #c9d98f;
+	--tracking-main-header: -2%;
 }
 
 html {
-	font-size: 62.5%;
 	scroll-behavior: smooth;
 }
 
 body {
 	height: 100vh;
 	background-color: var(--color-bg-color);
-	font-size: 1.6rem;
 }
 
 .burgerBtn {
@@ -29,7 +29,7 @@ body {
 	justify-content: space-around;
 	align-items: center;
 	flex-direction: column;
-	padding: 1em 2em;
+	padding: 1em 1.5em;
 	background: transparent;
 	border: 1px solid transparent;
 	transition: transform 0.3s;
@@ -66,6 +66,7 @@ body {
 	position: relative;
 	padding: 1em;
 	margin: 0.2em 2em;
+	font-size: 1.6rem;
 	text-decoration: none;
 	transition: color 0.3s;
 	z-index: 0;
@@ -141,4 +142,31 @@ body {
 		opacity: 1;
 		transform: translateY(0);
 	}
+}
+
+.offer__box {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	padding: 2em;
+	margin: 1em;
+	border-radius: 8px;
+	box-shadow: -1px 6px 15px -5px #eee;
+	transition: scale 0.3s;
+	width: 80%;
+}
+
+/* https://css-tricks.com/the-shapes-of-css/ */
+/*  
+#triangle-topleft {
+	width: 0;
+	height: 0;
+	border-top: 100px solid red;
+	border-right: 100px solid transparent;
+  } */
+
+.test {
+	width: 100%;
+	height: 100%;
+	background-image: url('../assets/stacked-waves-haikei(1).svg');
 }

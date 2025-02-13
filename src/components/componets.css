@@ -1,0 +1,40 @@
+.block-indentation {
+	width: 0;
+	height: 0;
+	border-top: 100px solid var(--color-bg-color);
+	border-right: 100vw solid transparent;
+}
+
+.block-indentation--green {
+	width: 0;
+	height: 0;
+	border-top: 100px solid var(--color-bg-about);
+	border-right: 100vw solid transparent;
+}
+
+/* https://css-tricks.com/the-shapes-of-css/ */
+
+/* .block-indentation {
+	width: 0;
+	height: 0;
+	border-top: 100px solid red;
+	border-right: 100px solid transparent;
+} */
+
+.section-padding {
+	padding: 3.2em 2em;
+}
+
+.subHeading {
+	position: absolute;
+	font-size: 1.25rem;
+	text-transform: uppercase;
+	letter-spacing: 5%;
+	color: var(--color-main-color);
+}
+
+@media (width >= 80rem) {
+	.subHeading {
+		font-size: 1.5rem;
+	}
+}

@@ -1,4 +1,5 @@
 @import 'tailwindcss';
+@import './components/componets.css';
 
 @layer base {
 	.container {
@@ -11,17 +12,17 @@
 	--color-white: #f2f2f2;
 	--color-bg-color: #6c9565;
 	--color-main-color: #c9d98f;
+	--color-bg-about: #44733D;
+	--tracking-main-header: -2%;
 }
 
 html {
-	font-size: 62.5%;
 	scroll-behavior: smooth;
 }
 
 body {
 	height: 100vh;
 	background-color: var(--color-bg-color);
-	font-size: 1.6rem;
 }
 
 .burgerBtn {
@@ -29,7 +30,7 @@ body {
 	justify-content: space-around;
 	align-items: center;
 	flex-direction: column;
-	padding: 1em 2em;
+	padding: 1em 1.5em;
 	background: transparent;
 	border: 1px solid transparent;
 	transition: transform 0.3s;
@@ -66,6 +67,7 @@ body {
 	position: relative;
 	padding: 1em;
 	margin: 0.2em 2em;
+	font-size: 1.6rem;
 	text-decoration: none;
 	transition: color 0.3s;
 	z-index: 0;
@@ -93,6 +95,21 @@ body {
 
 .nav__item:nth-child(5) {
 	animation-delay: 0.8s;
+}
+
+.nav__desktop-item {
+	display: flex;
+	align-items: center;
+	padding: 1em 2em;
+	font-weight: normal;
+	text-decoration: none;
+	color: #000;
+	transition: background-color 0.3s, color 0.3s;
+}
+
+.nav__desktop-item:first-child {
+	margin-right: auto;
+	padding: 0.7em;
 }
 
 /* .nav__item::after {
@@ -140,5 +157,68 @@ body {
 	to {
 		opacity: 1;
 		transform: translateY(0);
+	}
+}
+
+.offer__box {
+	position: relative;
+	padding: 1em 2em;
+	margin: 2em 1em;
+	width: 100%;
+	max-width: 1000px;
+	border-radius: 8px;
+	box-shadow: -1px 6px 15px -5px #eee;
+	background-color: #eee;
+	transition: scale 0.3s;
+	overflow: hidden;
+}
+
+.offer__img {
+	position: relative;
+	margin: 1em 0;
+	width: 100%;
+	height: 400px;
+	transition: transform 0.3s;
+
+	background-image: url('./assets/great-dane-2973438_1280.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.offer__img:hover {
+	transform: scale(1.05);
+}
+
+.offer__img-shadow {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(39, 92, 45, 0.3);
+}
+
+.benefits {
+	background-image: url('./assets/tlomini.svg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+@media (width >= 40rem) {
+	.offer__box {
+		width: 80%;
+	}
+}
+
+@media (width >= 64rem) {
+	.benefits {
+		background-image: url('./assets/stacked-waves-big.svg');
+	}
+
+	.offer__box {
+		background-color: transparent;
+		box-shadow: none;
 	}
 }

@@ -1,5 +1,5 @@
 @import 'tailwindcss';
-@import './components/componets.css';
+@import './components/components.css';
 
 @layer base {
 	.container {

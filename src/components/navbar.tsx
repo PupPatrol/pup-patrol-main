@@ -1,13 +1,6 @@
-import React, { useState } from 'react'
-import useMedia from 'use-media'
+import { useState } from 'react'
 
 function Navbar() {
-	let docString
-	if (useMedia({ minWidth: '768px' })) {
-		docString = 'Documentation'
-	} else {
-		docString = 'Docs'
-	}
 
 	const [menuOpen, setMenuOpen] = useState(false)
 

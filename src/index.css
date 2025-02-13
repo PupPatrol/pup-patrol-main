@@ -12,6 +12,7 @@
 	--color-white: #f2f2f2;
 	--color-bg-color: #6c9565;
 	--color-main-color: #c9d98f;
+	--color-bg-about: #44733D;
 	--tracking-main-header: -2%;
 }
 
@@ -96,6 +97,21 @@ body {
 	animation-delay: 0.8s;
 }
 
+.nav__desktop-item {
+	display: flex;
+	align-items: center;
+	padding: 1em 2em;
+	font-weight: normal;
+	text-decoration: none;
+	color: #000;
+	transition: background-color 0.3s, color 0.3s;
+}
+
+.nav__desktop-item:first-child {
+	margin-right: auto;
+	padding: 0.7em;
+}
+
 /* .nav__item::after {
 	position: absolute;
 	bottom: 0;
@@ -152,7 +168,7 @@ body {
 	max-width: 1000px;
 	border-radius: 8px;
 	box-shadow: -1px 6px 15px -5px #eee;
-	background-color: gray;
+	background-color: #eee;
 	transition: scale 0.3s;
 	overflow: hidden;
 }
@@ -163,11 +179,11 @@ body {
 	width: 100%;
 	height: 400px;
 	transition: transform 0.3s;
-	
-	/* background-image: url('./assets/great-dane-2973438_1280.jpg');
+
+	background-image: url('./assets/great-dane-2973438_1280.jpg');
 	background-size: cover;
 	background-position: center;
-	background-repeat: no-repeat; */
+	background-repeat: no-repeat;
 }
 
 .offer__img:hover {
@@ -193,5 +209,16 @@ body {
 @media (width >= 40rem) {
 	.offer__box {
 		width: 80%;
+	}
+}
+
+@media (width >= 64rem) {
+	.benefits {
+		background-image: url('./assets/stacked-waves-big.svg');
+	}
+
+	.offer__box {
+		background-color: transparent;
+		box-shadow: none;
 	}
 }

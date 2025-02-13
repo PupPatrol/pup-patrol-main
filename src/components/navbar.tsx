@@ -46,6 +46,9 @@ function Navbar() {
 						Specification
 					</a>
 					<a href='#' className={`nav__item ${menuOpen ? 'nav__item--active' : ''}`}>
+						Doc
+					</a>
+					<a href='#' className={`nav__item ${menuOpen ? 'nav__item--active' : ''}`}>
 						Log in
 					</a>
 				</div>

@@ -4,18 +4,21 @@ import dogImage from '../assets/great-dane-2973438_1280.jpg'
 
 function BenefitMobileSection() {
 	return (
-		<section className='benefits section-padding mb-40'>
+		<section className='benefits px-[3.2rem] mb-20 md:px-0'>
 			<div className='flex flex-col items-center justify-center  lg:mx-5 w-full'>
 				<div className='offer__box text-black lg:text-white lg:h-full lg:flex'>
-					{/* <img src='../assets/great-dane-2973438_1280.jpg' alt='dog in the forest' className='offer__img' /> */}
-					<div className='offer__img lg:max-w-[400px]'>
+					<div className='relative overflow-hidden lg:w-1/2'>
+						<img
+							src={dogImage}
+							alt='dog in the forest'
+							className='w-full h-[400px] transition-transform duration-300 hover:scale-105'
+						/>
+
 						<div className='offer__img-shadow'></div>
 					</div>
 					<div className='lg:px-10 lg:flex lg:flex-col lg:flex-1'>
-						<p className='subHeading top-[455px] lg:top-[35px]'>Benefits</p>
-						<h3 className='text-[1.8rem] mt-10 lg:text-[2rem]'>
-							Accurate tracking of your pet within a radius of 4 kilometers!
-						</h3>
+						<p className='subHeading top-[440px] lg:top-[40px]'>Benefits</p>
+						<h2 className='sectionHeading mt-10'>Accurate tracking of your pet within a radius of 4 kilometers!</h2>
 						<p>It will work even in a forest full of obstacles</p>
 						<button className='bg-main-color rounded-full px-[2em] py-[1em] w-full mt-15 lg:mt-auto mb-5 text-black cursor-pointer'>
 							View our pricing!
@@ -29,12 +32,10 @@ function BenefitMobileSection() {
 						<div className='offer__img-shadow'></div>
 					</div>
 					<div className='lg:px-10 lg:flex lg:flex-col lg:flex-1'>
-						<p className='subHeading top-[455px] lg:top-[35px]'>Benefits</p>
-						<h3 className='text-[1.8rem] mt-10 lg:text-[2rem]'>
-							A large and durable battery resistant to external factors
-						</h3>
+						<p className='subHeading top-[440px] lg:top-[35px]'>Benefits</p>
+						<h2 className='sectionHeading mt-10'>A large and durable battery resistant to external factors</h2>
 						<p>Fast charging time</p>
-						<button className='bg-main-color rounded-full px-[2em] py-[1em] w-full mt-15 lg:mt-auto mb-5 text-black cursor-pointer'>
+						<button className='bg-main-color rounded-full px-[2em] py-[1em] w-full mt-15 lg:mt-auto mb-5 text-black cursor-pointer font-[1.25rem]'>
 							View our pricing!
 						</button>
 					</div>

@@ -1,13 +1,13 @@
 import BenefitMobileSection from '../components/benefitMobileSection'
 import dog from '../assets/great-dane-2973438_1280.jpg'
+import politechnika from '../assets/politechnika-min.png'
 
-function Home(){
-
-    return(
-        <div>
-        <header className='relative container mb-40 lg:flex mt-25 px-6 md:px-12 xl:px-24'>
-				<div className='lg:flex lg:flex-col lg:w-3/5 xl:w-1/2 text-white '>
-					<h1 className='text-[2.4rem] tracking-main-header w-[75%] lg:text-[3rem]'>
+function Home() {
+	return (
+		<div>
+			<header className='relative container mb-40 lg:flex mt-25 px-6 md:px-12 xl:px-18'>
+				<div className='lg:flex lg:flex-col lg:w-4/5 xl:w-1/2 text-white '>
+					<h1 className='text-[2.4rem] tracking-main-header w-[75%] lg:text-[3rem] xl:text-[3.2rem]'>
 						Ever tought of tracking your pet’s fittness?{' '}
 					</h1>
 					<p className='text-base mt-1 mb-8 w-[80%] lg:text-[1.25rem]'>
@@ -22,8 +22,9 @@ function Home(){
 						</button>
 					</div>
 				</div>
-				<div className='hidden lg:block'>
-					<img src={dog} alt='dog' />
+				<div className='hidden ml-10 lg:block lg:w-1/2 2xl:flex'>
+					<img src={dog} alt='dog' className='ml-5 h-[500px] w-full w-max-[400px]' />
+					<img src={dog} alt='dog' className='hidden h-[400px] w-full w-max-[350px] 2xl:block 2xl:ml-5' />
 				</div>
 				<br />
 				<br />
@@ -31,26 +32,31 @@ function Home(){
 			<main>
 				<BenefitMobileSection />
 				<section className='about bg-bg-about overflow-hidden mb-30'>
-					<div className='block-indentation mb-40'></div>
-					<div className='container section-padding mb-40'>
-						<h3>About us</h3>
-						<div>
-							<div>
-								<img src='' alt='' />
+					<div className='block-indentation mb-20'></div>
+					<div className='container section-padding mb-40 text-white'>
+						<h2 className='sectionHeading text-center text-main-color mb-15'>About us</h2>
+						<div className='lg:flex'>
+							<div className=''>
+								<img
+									src={dog}
+									alt='Nasze grupowe zdjecie'
+									className='mb-[2em] w-full h-auto max-w-screen md:mb-[3em]'
+								/>
 							</div>
-							<div>
+							<div className='max-w-prose lg:ml-5'>
 								<p>
 									Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam omnis aliquam inventore, eaque
 									eveniet assumenda sunt asperiores a cupiditate beatae, tempore recusandae, molestias ex molestiae
 									alias aspernatur officia ab libero?
 								</p>
-								<h4>Technologies:</h4>
+								<h3 className='mt-5 mb-2.5 font-bold'>Technologies:</h3>
 								<div className='w-full h-[50px] bg-gray-500'></div>
 							</div>
 						</div>
-						<div>
-							<h3>Our sponsor:</h3>
-							<img src='' alt='Politechnika Morska' />
+						<div className='flex items-center justify-center flex-col'>
+							<h3 className='sectionHeading text-main-color my-15'>Our sponsor:</h3>
+							<a href='https://pm.szczecin.pl/pl/'></a>
+							<img src={politechnika} alt='Politechnika Morska' className='bg-white p-5' />
 						</div>
 					</div>
 					<div className='block-indentation--green bg-bg-color'></div>
@@ -77,8 +83,8 @@ function Home(){
 				<br />
 				<br />
 			</main>
-            </div>
-    )
+		</div>
+	)
 }
 
-export default Home;
+export default Home

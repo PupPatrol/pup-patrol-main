@@ -12,15 +12,6 @@
 	border-right: 100vw solid transparent;
 }
 
-/* https://css-tricks.com/the-shapes-of-css/ */
-
-/* .block-indentation {
-	width: 0;
-	height: 0;
-	border-top: 100px solid red;
-	border-right: 100px solid transparent;
-} */
-
 .section-padding {
 	padding: 3.2em 2em;
 }
@@ -31,6 +22,16 @@
 	text-transform: uppercase;
 	letter-spacing: 5%;
 	color: var(--color-main-color);
+}
+
+.sectionHeading {
+	font-size: 1.8rem;
+}
+
+@media (width >= 64rem) {
+	.sectionHeading {
+		font-size: 2.2rem;
+	}
 }
 
 @media (width >= 80rem) {

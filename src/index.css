@@ -6,6 +6,7 @@
 	.container {
 		margin-left: auto;
 		margin-right: auto;
+		padding: 0 2rem;
 	}
 }
 
@@ -13,6 +14,8 @@
 	--color-white: #f2f2f2;
 	--color-bg-color: #6c9565;
 	--color-main-color: #c9d98f;
+	--color-secondary-color: #c9c9c9;
+	--color-hover-color: #4a8c1b;
 	--color-bg-about: #44733d;
 	--tracking-main-header: -2%;
 	--tracking-testimonials-names: 18%;
@@ -106,41 +109,49 @@ body {
 }
 
 .nav__desktop-item {
+	position: relative;
 	display: flex;
 	align-items: center;
-	padding: 1em 2em;
+	padding: 0.5em 1em;
 	font-weight: normal;
 	text-decoration: none;
 	color: #000;
-	transition: background-color 0.3s, color 0.3s;
+	transition: 0.3s;
+}
+
+.nav__desktop-item:first-child {
+	padding: 0.7em;
+	padding-left: 0;
+}
+
+.nav__desktop-item::after,
+.nav__desktop-item::before {
+	content: '';
+	position: absolute;
+	width: 0;
+	bottom: 0;
+	border-bottom: 2px solid var(--color-main-color);
+	transition: 0.3s;
+}
+
+.nav__desktop-item::before {
+	right: 50%;
+}
+
+.nav__desktop-item::after {
+	left: 50%;
 }
 
 .nav__desktop-item:first-child {
 	margin-right: auto;
-	padding: 0.7em;
 }
 
-/* .nav__item::after {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 2px;
-	height: 100%;
-	background-color: #000;
-	transition: width 0.3s;
-	z-index: -1;
-	content: '';
+.nav__desktop-item:not(:first-child):hover::after,
+.nav__desktop-item:not(:first-child):hover::before {
+	width: 40%;
 }
 
-.nav__item:hover::after {
-	width: 100%;
-}
-
-.nav__item:hover {
-	color: white;
-} */
-
-.nav__item::after {
+.nav__item:not(:last-child)::after {
 	position: absolute;
 	bottom: 0;
 	left: 0;
@@ -154,6 +165,10 @@ body {
 
 .nav__item:hover::after {
 	height: 100%;
+}
+
+.nav__item:last-child {
+	margin-top: 1.5em;
 }
 
 @keyframes menu {
@@ -170,10 +185,10 @@ body {
 
 .offer__box {
 	position: relative;
-	padding: 1em 2em;
-	margin: 2em 1em;
+	padding: 1em 0;
+	margin: 2em 0;
 	width: 100%;
-	max-width: 650px;
+	max-width: 800px;
 	border-radius: 8px;
 	transition: scale 0.3s;
 	overflow: hidden;
@@ -252,5 +267,9 @@ body {
 		background-color: transparent;
 		box-shadow: none;
 		max-width: 1000px;
+	}
+
+	body {
+		font-size: 20px;
 	}
 }

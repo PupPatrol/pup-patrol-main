@@ -9,29 +9,33 @@ import tailwindIcon from '../assets/tailwindcss-mark.d52e9897.svg'
 function Home() {
 	return (
 		<div>
-			<header className='relative container mb-40 lg:flex mt-25 px-6 md:px-12 xl:px-18'>
-				<div className='lg:flex lg:flex-col lg:w-4/5 xl:w-1/2'>
-					<h1 className='text-[2.4rem] tracking-main-header w-[75%] lg:text-[3rem] xl:text-[3.2rem]'>
-						Ever tought of tracking your pet’s fittness?{' '}
-					</h1>
-					<p className='text-base mt-1 mb-8 w-[80%] lg:text-[1.25rem]'>
-						take care of your pet and satisfy your curiosity
-					</p>
-					<div className='flex flex-col items-start lg:flex-row xl:mt-5 lg:text-[1.25rem]'>
-						<button className='bg-main-color rounded-full px-[2em] py-[1em] w-[90%] mb-5 text-black cursor-pointer lg:w-full lg:mr-5'>
-							Get a smart collar!
-						</button>
-						<button className='rounded-full bg-transparent px-[2em] py-[1em] border border-main-color cursor-pointer lg:w-full'>
-							Design your own!
-						</button>
+			<header>
+				<div className='container'>
+					<div className='relative mb-40 lg:flex mt-25'>
+						<div className='lg:flex lg:flex-col lg:w-4/5 xl:w-1/2'>
+							<h1 className='text-[2.4rem] tracking-main-header w-[75%] lg:text-[3rem] xl:text-[3.2rem]'>
+								Ever tought of tracking your pet’s fittness?{' '}
+							</h1>
+							<p className='text-base mt-1 mb-8 w-[80%] lg:text-[1.25rem]'>
+								take care of your pet and satisfy your curiosity
+							</p>
+							<div className='flex flex-col items-start lg:flex-row xl:mt-5 lg:text-[1.25rem]'>
+								<button className='bg-main-color rounded-full px-[2em] py-[1em] w-[90%] mb-5 text-black cursor-pointer lg:w-full lg:mr-5'>
+									Get a smart collar!
+								</button>
+								<button className='rounded-full bg-transparent px-[2em] py-[1em] border border-main-color cursor-pointer lg:w-full'>
+									Design your own!
+								</button>
+							</div>
+						</div>
+						<div className='hidden ml-10 lg:block lg:w-1/2 2xl:flex'>
+							<img src={dog} alt='dog' className='ml-5 h-[500px] w-full w-max-[400px]' />
+							<img src={dog} alt='dog' className='hidden h-[400px] w-full w-max-[350px] 2xl:block 2xl:ml-5' />
+						</div>
+						<br />
+						<br />
 					</div>
 				</div>
-				<div className='hidden ml-10 lg:block lg:w-1/2 2xl:flex'>
-					<img src={dog} alt='dog' className='ml-5 h-[500px] w-full w-max-[400px]' />
-					<img src={dog} alt='dog' className='hidden h-[400px] w-full w-max-[350px] 2xl:block 2xl:ml-5' />
-				</div>
-				<br />
-				<br />
 			</header>
 			<main>
 				<BenefitMobileSection />
@@ -142,7 +146,7 @@ function Home() {
 							<p className='subHeading top-[32.5px]'>testimonials</p>
 							<h2 className='sectionHeading text-center'>Read what other have to say</h2>
 							<div className='mt-25 lg:flex justify-evenly space-x-8'>
-								<div className='relative flex flex-col items-center p-10 bg-gray-400 w-full max-w-[400px] rounded-lg'>
+								<div className='relative flex flex-col items-center p-10 bg-secondary-color text-black w-full max-w-[400px] rounded-lg'>
 									<img
 										src={dog}
 										alt='pies'
@@ -155,7 +159,7 @@ function Home() {
 										quisquam tempore ad debitis!
 									</p>
 								</div>
-								<div className='hidden relative  flex-col items-center p-10 bg-gray-400 w-full max-w-[400px] rounded-lg lg:flex'>
+								<div className='relative flex flex-col items-center p-10 bg-secondary-color text-black w-full max-w-[400px] rounded-lg'>
 									<img
 										src={dog}
 										alt='pies'
@@ -168,7 +172,7 @@ function Home() {
 										quisquam tempore ad debitis!
 									</p>
 								</div>
-								<div className='hidden relative flex-col items-center p-10 bg-gray-400 w-full max-w-[400px] rounded-lg lg:flex'>
+								<div className='relative flex flex-col items-center p-10 bg-secondary-color text-black w-full max-w-[400px] rounded-lg'>
 									<img
 										src={dog}
 										alt='pies'
@@ -200,13 +204,13 @@ function Home() {
 								</h4>
 								<p>$$$ PLN</p>
 								<p>
-									kolor: <span className='text-white'>beżowy</span>
+									kolor: <span className='text-secondary-color'>beżowy</span>
 								</p>
 								<div className='flex flex-col items-start'>
 									<button className='bg-main-color rounded-full px-[2em] py-[1em] mt-15 mb-1 w-1/2 text-black cursor-pointer xl:text-[1.25rem]'>
 										Buy now
 									</button>
-									<p className='text-sm text-center w-1/2'>free return within 14 days</p>
+									<p className='text-sm text-center w-1/2 text-secondary-color'>free return within 14 days</p>
 								</div>
 							</div>
 						</div>
@@ -219,7 +223,7 @@ function Home() {
 					<div className='container section-padding'>
 						<div className='flex flex-col items-center lg:flex-row-reverse gap-10'>
 							<form action='mail.php' method='post' className='contact-form'>
-								<h3 className='text-xl font-bold'>Get in touch</h3>
+								<h3 className='text-xl font-bold lg:text-2xl'>Get in touch</h3>
 								<p>We are here for you! How can we help?</p>
 								<div className='contact-box'>
 									<label htmlFor='name'>Name:</label>
@@ -239,12 +243,13 @@ function Home() {
 
 							<p className='msg-status'></p>
 
-							<div className='my-20 w-full h-[500px] lg:mt-0'>
+							<div className='my-20 w-full h-[500px] lg:mt-0 lg:pt-0 rounded-xs'>
 								<h3 className='text-2xl text-center mb-5 lg:hidden'>Find us</h3>
 								<iframe
 									src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2377.1087008115355!2d14.552557476991419!3d53.43076466840339!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47aa0913ca84d98d%3A0x24ebd70da5ba46c1!2sTechnikum%20Informatyczne%20SCI!5e0!3m2!1spl!2spl!4v1739616389960!5m2!1spl!2spl'
 									width='100%'
 									height='100%'
+									className='rounded-xl'
 									style={{ border: 0 }}
 									allowFullScreen
 									loading='lazy'

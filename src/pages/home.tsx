@@ -1,4 +1,6 @@
 import BenefitMobileSection from '../components/benefitMobileSection'
+import Footer from '../components/footer'
+import Accordion from '../components/accordion'
 import dog from '../assets/great-dane-2973438_1280.jpg'
 import politechnika from '../assets/politechnika-min.png'
 import reactIcon from '../assets/react.svg'
@@ -185,8 +187,8 @@ function Home() {
 				</section>
 				<section className='specification section-padding'>
 					<div className='container xl:text-[1.25rem]'>
-						<h2 className='mb-5 text-[1.25rem] text-main-color uppercase tracking-five-proc lg:text-[2.2rem] text-center '>
-							testimonials
+						<h2 className='mb-2 lg:mb-5 text-[1.25rem] text-main-color uppercase tracking-five-proc lg:text-[2.2rem] lg:text-center '>
+							Specification
 						</h2>
 						<div className='lg:flex'>
 							<div className='lg:size-1/2'>
@@ -208,42 +210,51 @@ function Home() {
 								</div>
 							</div>
 						</div>
-						<div>
-							<ul className='list-disc pl-10 mt-15 marker:text-black text-white'>
-								<li>lorem 1</li>
-								<li>lorem 2</li>
-								<li>lorem 3</li>
-								<li>lorem 4</li>
-								<li>lorem 5</li>
-							</ul>
+						<Accordion />
+					</div>
+				</section>
+				<section className='contact relative bg-white overflow-hidden'>
+					<div className='block-indentation absolute top-0 left-0 z-100'></div>
+					<h2 className='sectionHeading mt-50 mb-10 text-center'>Contact us</h2>
+					<div className='container section-padding'>
+						<div className='flex flex-col items-center lg:flex-row-reverse gap-10'>
+							<form action='mail.php' method='post' className='contact-form'>
+								<h3 className='text-xl font-bold'>Get in touch</h3>
+								<p>We are here for you! How can we help?</p>
+								<div className='contact-box'>
+									<label htmlFor='name'>Name:</label>
+									<input type='text' id='name' name='name' required />
+								</div>
+								<div className='contact-box'>
+									<label htmlFor='email'>E-mail:</label>
+									<input type='email' id='email' name='email' required />
+								</div>
+								<div className='contact-box'>
+									<label htmlFor='msg'>Message:</label>
+									<textarea name='msg' id='msg' required></textarea>
+								</div>
+
+								<button type='submit'>Send</button>
+							</form>
+
+							<p className='msg-status'></p>
+
+							<div className='my-20 w-full h-[500px] lg:mt-0'>
+								<h3 className='text-2xl text-center mb-5 lg:hidden'>Find us</h3>
+								<iframe
+									src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2377.1087008115355!2d14.552557476991419!3d53.43076466840339!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47aa0913ca84d98d%3A0x24ebd70da5ba46c1!2sTechnikum%20Informatyczne%20SCI!5e0!3m2!1spl!2spl!4v1739616389960!5m2!1spl!2spl'
+									width='100%'
+									height='100%'
+									style={{ border: 0 }}
+									allowFullScreen
+									loading='lazy'
+									referrerPolicy='no-referrer-when-downgrade'></iframe>
+							</div>
 						</div>
 					</div>
 				</section>
-				<section className='contact section-padding'>
-					{/* <div className='block-indentation'></div> */}
-					<div className='container'></div>
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-				</section>
 			</main>
+			<Footer />
 		</div>
 	)
 }

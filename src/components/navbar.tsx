@@ -9,7 +9,7 @@ function Navbar() {
 	}
 
 	return (
-		<nav className='fixed top-0 bottom-0 flex items-center justify-end  w-full z-1000 text-[1.8rem] h-[100px]'>
+		<nav className='fixed top-0 bottom-0 flex items-center justify-end  w-full z-1000 text-[1.8rem] h-[100px] text-black'>
 			<a href='#' className='mr-auto px-[0.5em] py-[1em] cursor-pointer text-white'>
 				PupPatrol
 			</a>

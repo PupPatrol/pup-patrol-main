@@ -17,25 +17,30 @@ function BenefitMobileSection() {
 						<div className='offer__img-shadow'></div>
 					</div>
 					<div className='lg:px-10 lg:flex lg:flex-col lg:flex-1'>
-						<p className='subHeading top-[440px] lg:top-[40px]'>Benefits</p>
+						<p className='subHeading top-[440px] lg:top-[35px]'>Benefits</p>
 						<h2 className='sectionHeading mt-10'>Accurate tracking of your pet within a radius of 4 kilometers!</h2>
 						<p>It will work even in a forest full of obstacles</p>
-						<button className='bg-main-color rounded-full px-[2em] py-[1em] w-full mt-15 lg:mt-auto mb-5 text-black cursor-pointer'>
+						<button className='bg-main-color rounded-full px-[2em] py-[1em] w-full mt-15 lg:mt-auto mb-5 text-black cursor-pointer xl:text-[1.25rem]'>
 							View our pricing!
 						</button>
 					</div>
 				</div>
 
 				<div className='offer__box text-black lg:h-full lg:flex lg:text-white'>
-					{/* <img src='../assets/great-dane-2973438_1280.jpg' alt='dog in the forest' className='offer__img' /> */}
-					<div className='offer__img lg:max-w-[400px] lg:order-1'>
+					<div className='relative overflow-hidden lg:w-1/2 lg:order-1'>
+						<img
+							src={dogImage}
+							alt='dog in the forest'
+							className='w-full h-[400px] transition-transform duration-300 hover:scale-105'
+						/>
+
 						<div className='offer__img-shadow'></div>
 					</div>
 					<div className='lg:px-10 lg:flex lg:flex-col lg:flex-1'>
 						<p className='subHeading top-[440px] lg:top-[35px]'>Benefits</p>
 						<h2 className='sectionHeading mt-10'>A large and durable battery resistant to external factors</h2>
 						<p>Fast charging time</p>
-						<button className='bg-main-color rounded-full px-[2em] py-[1em] w-full mt-15 lg:mt-auto mb-5 text-black cursor-pointer font-[1.25rem]'>
+						<button className='bg-main-color rounded-full px-[2em] py-[1em] w-full mt-15 lg:mt-auto mb-5 text-black cursor-pointer lg:text-[1.25rem]'>
 							View our pricing!
 						</button>
 					</div>

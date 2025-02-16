@@ -11,7 +11,7 @@ function Home() {
 		<div>
 			<header>
 				<div className='container'>
-					<div className='relative mb-40 lg:flex mt-25'>
+					<div className='relative mb-40 lg:flex mt-40'>
 						<div className='lg:flex lg:flex-col lg:w-4/5 xl:w-1/2'>
 							<h1 className='text-[2.4rem] tracking-main-header w-[75%] lg:text-[3rem] xl:text-[3.2rem]'>
 								Ever tought of tracking your pet’s fittness?{' '}

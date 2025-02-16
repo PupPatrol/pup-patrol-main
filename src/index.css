@@ -108,6 +108,17 @@ body {
 	animation-delay: 1s;
 }
 
+.nav__desktop-bg {
+	/* background-color: rgba(34, 59, 30, 0.4); */
+	background-color: rgba(72, 116, 66, 0.4);
+}
+
+.nav__desktop-bg2 {
+	/* background-color: rgba(72, 116, 66, 0.8); */
+	background-color: rgb(88, 124, 84);
+	/* background-color: var(--color-bg-about); */
+}
+
 .nav__desktop-item {
 	position: relative;
 	display: flex;
@@ -115,7 +126,7 @@ body {
 	padding: 0.5em 1em;
 	font-weight: normal;
 	text-decoration: none;
-	color: #000;
+	color: var(--color-white);
 	transition: 0.3s;
 }
 

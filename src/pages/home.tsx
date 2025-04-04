@@ -1,10 +1,10 @@
 import BenefitMobileSection from '../components/benefitMobileSection'
 import Footer from '../components/footer'
 import Accordion from '../components/accordion'
-import dog from '../assets/great-dane-2973438_1280.jpg'
-import politechnika from '../assets/politechnika-min.png'
-import reactIcon from '../assets/react.svg'
-import tailwindIcon from '../assets/tailwindcss-mark.d52e9897.svg'
+import dog from '../assets/img/great-dane-2973438_1280.jpg'
+import politechnika from '../assets/img/politechnika-min.png'
+import reactIcon from '../assets/svg/react.svg'
+import tailwindIcon from '../assets/svg/tailwindcss-mark.d52e9897.svg'
 
 function Home() {
 	return (

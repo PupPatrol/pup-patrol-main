@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import instagramIcon from '../assets/instagram.svg'
 import twitterIcon from '../assets/twitter.svg'
 import facebookIcon from '../assets/facebook.svg'

@@ -145,7 +145,7 @@ function Home() {
 						<div className='flex flex-col items-center mb-10'>
 							<p className='subHeading top-[32.5px]'>testimonials</p>
 							<h2 className='sectionHeading text-center'>Read what other have to say</h2>
-							<div className='mt-25 lg:flex justify-evenly space-x-8'>
+							<div className='mt-25 lg:flex justify-evenly lg:space-x-8 space-y-28'>
 								<div className='relative flex flex-col items-center p-10 bg-secondary-color text-black w-full max-w-[400px] rounded-lg'>
 									<img
 										src={dog}
@@ -172,7 +172,7 @@ function Home() {
 										quisquam tempore ad debitis!
 									</p>
 								</div>
-								<div className='relative flex flex-col items-center p-10 bg-secondary-color text-black w-full max-w-[400px] rounded-lg'>
+								<div className='relative flex flex-col items-center p-10 bg-secondary-color text-black size-full max-w-[400px] rounded-lg'>
 									<img
 										src={dog}
 										alt='pies'

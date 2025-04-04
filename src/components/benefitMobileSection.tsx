@@ -1,5 +1,3 @@
-import React, { useState } from 'react'
-import useMedia from 'use-media'
 import dogImage from '../assets/great-dane-2973438_1280.jpg'
 
 function BenefitMobileSection() {

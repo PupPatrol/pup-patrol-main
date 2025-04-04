@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import arrowDownIcon from '../assets/arrow-down.svg'
 
 function Accordion() {

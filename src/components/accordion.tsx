@@ -1,5 +1,5 @@
-import { useState } from 'react'
-import arrowDownIcon from '../assets/arrow-down.svg'
+import React, { useState } from 'react'
+import arrowDownIcon from '../assets/svg/arrow-down.svg'
 
 function Accordion() {
 	const [isOpen1, setIsOpen1] = useState(false)

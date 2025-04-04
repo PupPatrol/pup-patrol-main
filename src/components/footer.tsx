@@ -1,6 +1,6 @@
-import instagramIcon from '../assets/instagram.svg'
-import twitterIcon from '../assets/twitter.svg'
-import facebookIcon from '../assets/facebook.svg'
+import instagramIcon from '../assets/svg/instagram.svg'
+import twitterIcon from '../assets/svg/twitter.svg'
+import facebookIcon from '../assets/svg/facebook.svg'
 
 function Footer() {
 	return (

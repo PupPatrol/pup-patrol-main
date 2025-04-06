@@ -1,6 +1,17 @@
-
+// import instagramIcon from '../assets/svg/instagram.svg'
+// import twitterIcon from '../assets/svg/twitter.svg'
+// import facebookIcon from '../assets/svg/facebook.svg'
+// import mailIcon from '../assets/svg/mail.svg'
 
 import { useState } from 'react'
+import NavLinkMobile from '../components/navLinkMobile'
+
+const scrollToTop = () => {
+	scroll.scrollToTop({
+		duration: 500,
+		smooth: 'easeInOutQuad',
+	})
+}
 
 function Navbar() {
 	const [menuOpen, setMenuOpen] = useState(false)
@@ -11,7 +22,7 @@ function Navbar() {
 
 	return (
 		<nav className='fixed top-0 bottom-0 text-[1.8rem] h-[60px] w-full z-1000 text-white'>
-			<div className='nav__desktop-bg'>
+			{/* <div className='nav__desktop-bg'>
 				<div className='container'>
 					<div className='flex items-center justify-center text-base h-[40px]'>
 						<a href='mailto:kontakt@PupPatrol.com' className='mr-auto leading-[40px]'>
@@ -29,14 +40,14 @@ function Navbar() {
 						</a>
 					</div>
 				</div>
-			</div>
+			</div> */}
 
 			<div className='nav__desktop-bg2 bg-[]'>
 				<div className='container'>
 					<div className='flex items-center h-[60px]'>
-						<a href='#' className='mr-auto cursor-pointer'>
+						<NavLinkMobile href='#' className='mr-auto cursor-pointer'>
 							PupPatrol
-						</a>
+						</NavLinkMobile>
 						<button className={`burgerBtn ${menuOpen ? 'burgerBtn--active' : ''}`} onClick={handleBurgerClick}>
 							<div
 								style={{
@@ -50,24 +61,42 @@ function Navbar() {
 								menuOpen ? '' : 'hidden'
 							} fixed top-0 left-0 h-screen w-full transition-transform z-1000 bg-white`}>
 							<div className='flex justify-center items-center h-screen flex-col text-[#212121]'>
-								<a href='#' className={`nav__item ${menuOpen ? 'nav__item--active' : ''}`}>
+								<NavLinkMobile
+									to='about-us'
+									className={`nav__item ${menuOpen ? 'nav__item--active' : ''}`}
+									onClick={() => setMenuOpen(false)}>
 									About us
-								</a>
-								<a href='#' className={`nav__item ${menuOpen ? 'nav__item--active' : ''}`}>
+								</NavLinkMobile>
+								<NavLinkMobile
+									to='about-collar'
+									className={`nav__item ${menuOpen ? 'nav__item--active' : ''}`}
+									onClick={() => setMenuOpen(false)}>
 									About the collar
-								</a>
-								<a href='#' className={`nav__item ${menuOpen ? 'nav__item--active' : ''}`}>
+								</NavLinkMobile>
+								<NavLinkMobile
+									to='testimonials'
+									className={`nav__item ${menuOpen ? 'nav__item--active' : ''}`}
+									onClick={() => setMenuOpen(false)}>
 									Opinions
-								</a>
-								<a href='#' className={`nav__item ${menuOpen ? 'nav__item--active' : ''}`}>
+								</NavLinkMobile>
+								<NavLinkMobile
+									to='specification'
+									className={`nav__item ${menuOpen ? 'nav__item--active' : ''}`}
+									onClick={() => setMenuOpen(false)}>
 									Specification
-								</a>
-								<a href='#' className={`nav__item ${menuOpen ? 'nav__item--active' : ''}`}>
+								</NavLinkMobile>
+								<NavLinkMobile
+									to='#'
+									className={`nav__item ${menuOpen ? 'nav__item--active' : ''}`}
+									onClick={() => setMenuOpen(false)}>
 									Doc
-								</a>
-								<a href='#' className={`nav__item ${menuOpen ? 'nav__item--active' : ''}`}>
+								</NavLinkMobile>
+								<NavLinkMobile
+									to='#'
+									className={`nav__item ${menuOpen ? 'nav__item--active' : ''}`}
+									onClick={() => setMenuOpen(false)}>
 									Log in
-								</a>
+								</NavLinkMobile>
 							</div>
 						</div>
 					</div>

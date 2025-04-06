@@ -3,8 +3,10 @@ import Footer from '../components/footer'
 import Accordion from '../components/accordion'
 import dog from '../assets/img/great-dane-2973438_1280.jpg'
 import politechnika from '../assets/img/politechnika-min.png'
+
 import reactIcon from '../assets/svg/react.svg'
 import tailwindIcon from '../assets/svg/tailwindcss-mark.d52e9897.svg'
+
 
 function Home() {
 	return (
@@ -39,7 +41,7 @@ function Home() {
 			</header>
 			<main>
 				<BenefitMobileSection />
-				<section className='about bg-bg-about overflow-hidden mb-30'>
+				<section className='about bg-bg-about overflow-hidden mb-30' id='about-us'>
 					<div className='block-indentation mb-20'></div>
 					<div className='container section-padding mb-40'>
 						<h2 className='sectionHeading text-center text-main-color mb-15'>About us</h2>
@@ -63,14 +65,14 @@ function Home() {
 						<div className='flex items-center justify-center flex-col'>
 							<h3 className='sectionHeading text-main-color my-15'>Our sponsor:</h3>
 							<a href='https://pm.szczecin.pl/pl/' className='cursor-pointer'>
-								<img src={politechnika} alt='Politechnika Morska' className='bg-white p-5' />
+								<img src={politechnika} alt='Politechnika Morska' className='bg-white p-5 rounded-2xl' />
 							</a>
 						</div>
 					</div>
 					<div className='block-indentation--green bg-bg-color'></div>
 				</section>
 
-				<section className='collar section-padding relative'>
+				<section className='collar section-padding relative' id='about-collar'>
 					<div className='container flex flex-col items-center lg:text-lg'>
 						<div className='flex flex-col items-center mb-10'>
 							<p className='subHeading top-[35px]'>project</p>
@@ -140,7 +142,7 @@ function Home() {
 						</div>
 					</div>
 				</section>
-				<section className='testimonials section-padding relative'>
+				<section className='testimonials section-padding relative' id='testimonials'>
 					<div className='container'>
 						<div className='flex flex-col items-center mb-10'>
 							<p className='subHeading top-[32.5px]'>testimonials</p>
@@ -189,7 +191,7 @@ function Home() {
 						</div>
 					</div>
 				</section>
-				<section className='specification section-padding'>
+				<section className='specification section-padding' id='specification'>
 					<div className='container xl:text-[1.25rem]'>
 						<h2 className='mb-2 lg:mb-5 text-[1.25rem] text-main-color uppercase tracking-five-proc lg:text-[2.2rem] lg:text-center '>
 							Specification

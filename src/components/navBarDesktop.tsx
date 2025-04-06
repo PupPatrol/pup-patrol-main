@@ -3,6 +3,15 @@ import twitterIcon from '../assets/svg/twitter.svg'
 import facebookIcon from '../assets/svg/facebook.svg'
 import mailIcon from '../assets/svg/mail.svg'
 import { useState, useEffect } from 'react'
+import { animateScroll as scroll } from 'react-scroll'
+import NavLinksDesktop from '../components/navLinksDesktop'
+
+const scrollToTop = () => {
+	scroll.scrollToTop({
+		duration: 500,
+		smooth: 'easeInOutQuad',
+	})
+}
 
 function NavBarDesktop() {
 	const [isScrolled, setIsScrolled] = useState(false)
@@ -50,24 +59,24 @@ function NavBarDesktop() {
 			<div className={`transition-colors duration-300 ${isScrolled ? 'translate-y-[-40px] bg-[#567a51]' : ''}`}>
 				<div className='container'>
 					<div className='w-full flex items-center justify-between text-lg text-secondary-color py-2'>
-						<a href='#' className='nav__desktop-item'>
+						<NavLinksDesktop to='' className='nav__desktop-item' onClick={scrollToTop}>
 							Logo
-						</a>
-						<a href='#' className='nav__desktop-item'>
-							About the collar
-						</a>
-						<a href='#' className='nav__desktop-item'>
+						</NavLinksDesktop>
+						<NavLinksDesktop to='about-us' className='nav__desktop-item'>
 							About us
-						</a>
-						<a href='#' className='nav__desktop-item'>
+						</NavLinksDesktop>
+						<NavLinksDesktop to='about-collar' className='nav__desktop-item'>
+							About the collar
+						</NavLinksDesktop>
+						<NavLinksDesktop to='testimonials' className='nav__desktop-item' onClick={scrollToTop}>
+							Opinions
+						</NavLinksDesktop>
+						<NavLinksDesktop to='specification' className='nav__desktop-item'>
 							Specification
-						</a>
-						<a href='#' className='nav__desktop-item'>
-							Doc
-						</a>
+						</NavLinksDesktop>
 						<div className='relative flex w-1/5 items-center justify-end'>
-							<button className='absolute left-[18px] px-[0.25em] py-[0.5em] w-[50%] xl:w-[40%] h-[99%] rounded-l-full border border-main-color cursor-pointer text-white'>
-								Sign in
+							<button className='absolute left-[18px] flex items-center justify-center px-[0.25em] py-[0.5em] w-[50%] xl:w-[40%] h-[99%] rounded-l-full border border-main-color cursor-pointer text-white'>
+								<p>Sign in</p>
 							</button>
 							<button className='px-[0.25em] py-[0.5em] w-[50%] xl:w-[60%] h-full rounded-full bg-main-color text-black cursor-pointer'>
 								Log in

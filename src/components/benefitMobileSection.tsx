@@ -1,8 +1,9 @@
 import dogImage from '../assets/img/great-dane-2973438_1280.jpg'
+import { Link } from 'react-scroll'
 
 function BenefitMobileSection() {
 	return (
-		<section className='benefits px-[3.2rem] mb-20 md:px-0'>
+		<section className='benefits mb-20 md:px-0' id='benefits'>
 			<div className='container overflow-hidden'>
 				<div className='flex flex-col items-center justify-center  lg:mx-5 w-full'>
 					<div className='offer__box text-white lg:h-full lg:flex'>
@@ -46,9 +47,9 @@ function BenefitMobileSection() {
 					</div>
 
 					<div className='flex mt-10'>
-						<a href='#' className='mr-1 text-[1.25rem]'>
+						<Link to='about-collar' className='mr-1 text-[1.25rem cursor-pointer' smooth={true} duration={500}>
 							Learn more
-						</a>
+						</Link>
 						<svg
 							xmlns='http://www.w3.org/2000/svg'
 							fill='none'
